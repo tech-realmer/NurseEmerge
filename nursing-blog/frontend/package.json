@@ -1,0 +1,24 @@
+{
+  "name": "nurse-emerge-blog-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for Nurse Emerge Blog - A nursing community platform",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "serve": "live-server --port=8080",
+    "build": "echo 'No build step required for static site'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "nursing",
+    "blog",
+    "healthcare",
+    "frontend",
+    "tailwind"
+  ],
+  "author": "Nurse Emerge",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
