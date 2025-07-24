@@ -4,17 +4,19 @@
   "description": "Frontend for Nurse Emerge Blog - A nursing community platform",
   "main": "index.html",
   "scripts": {
-    "start": "python3 -m http.server 8080",
-    "serve": "live-server --port=8080",
-    "build": "echo 'No build step required for static site'",
-    "deploy": "vercel --prod"
+    "start": "live-server --port=8080",
+    "preview": "python3 -m http.server 8080",
+    "deploy:surge": "surge . nurseemerge.surge.sh",
+    "deploy:netlify": "echo 'Deploy manually via drag and drop at netlify.com or connect GitHub repo'",
+    "deploy:gh-pages": "gh-pages -d ."
   },
   "keywords": [
     "nursing",
     "blog",
     "healthcare",
     "frontend",
-    "tailwind"
+    "html",
+    "tailwindcss"
   ],
   "author": "Nurse Emerge",
   "license": "MIT",
