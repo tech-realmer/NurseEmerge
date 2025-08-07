@@ -1,250 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nurse Emerge - Empowering Healthcare Excellence</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'nurse-red': '#dc2626',
-                        'nurse-dark-red': '#991b1b',
-                        'nurse-light-red': '#fecaca',
-                    }
-                }
-            }
-        }
-    </script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nurse Emerge - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-<body class="bg-white text-gray-800">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="index.html" class="flex items-center">
-                        <i class="fas fa-heartbeat text-nurse-red text-2xl mr-2"></i>
-                        <span class="text-2xl font-bold text-nurse-dark-red">Nurse Emerge</span>
-                    </a>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-nurse-red border-b-2 border-nurse-red px-3 py-2 font-medium">Home</a>
-                    <a href="blog.html" class="text-gray-700 hover:text-nurse-red px-3 py-2 font-medium transition">Blog</a>
-                    <a href="specialties.html" class="text-gray-700 hover:text-nurse-red px-3 py-2 font-medium transition">Specialties</a>
-                    <a href="events.html" class="text-gray-700 hover:text-nurse-red px-3 py-2 font-medium transition">Events</a>
-                    <a href="new-post.html" class="bg-nurse-red text-white px-4 py-2 rounded-lg hover:bg-nurse-dark-red transition">New Post</a>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="text-gray-700 hover:text-nurse-red">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="index.html" class="block px-3 py-2 text-nurse-red font-medium">Home</a>
-                <a href="blog.html" class="block px-3 py-2 text-gray-700 hover:text-nurse-red">Blog</a>
-                <a href="specialties.html" class="block px-3 py-2 text-gray-700 hover:text-nurse-red">Specialties</a>
-                <a href="events.html" class="block px-3 py-2 text-gray-700 hover:text-nurse-red">Events</a>
-                <a href="new-post.html" class="block px-3 py-2 text-gray-700 hover:text-nurse-red">New Post</a>
-            </div>
-        </div>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logo.png" alt="Nurse Emerge Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="specialties.html">Specialties</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="new-post.html">Add Post</a></li>
+      </ul>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
     </nav>
-
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-nurse-red to-nurse-dark-red text-white py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6">
-                    Empowering Healthcare Excellence
-                </h1>
-                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                    Where nursing expertise meets innovation. Join the community that's transforming healthcare one nurse at a time.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="blog.html" class="bg-white text-nurse-red px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-                        Explore Our Blog
-                    </a>
-                    <a href="specialties.html" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-nurse-red transition">
-                        View Specialties
-                    </a>
-                </div>
-            </div>
-        </div>
+  </header>
+  <main>
+    <section id="about">
+      <h1>About Nurse Emerge</h1>
+      <p>Nurse Emerge is dedicated to connecting African nurses and student nurses to a world of possibilities in nursing. Our platform fosters discovery, learning, and empowerment for nursing professionals across the continent.</p>
     </section>
-
-    <!-- Mission & Vision -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-nurse-dark-red mb-4">Our Purpose</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Driving excellence in nursing through education, innovation, and community
-                </p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="bg-white rounded-xl shadow-lg p-8">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-bullseye text-4xl text-nurse-red mb-4"></i>
-                        <h3 class="text-2xl font-bold text-nurse-dark-red">Our Mission</h3>
-                    </div>
-                    <p class="text-gray-700 leading-relaxed">
-                        To empower nurses worldwide through cutting-edge education, evidence-based practice resources, 
-                        and a supportive community that fosters professional growth and excellence in patient care. 
-                        We believe every nurse has the potential to make a transformative impact in healthcare.
-                    </p>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-8">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-eye text-4xl text-nurse-red mb-4"></i>
-                        <h3 class="text-2xl font-bold text-nurse-dark-red">Our Vision</h3>
-                    </div>
-                    <p class="text-gray-700 leading-relaxed">
-                        To be the leading platform where nursing innovation thrives, creating a global network of 
-                        empowered healthcare professionals who shape the future of patient care through collaboration, 
-                        continuous learning, and unwavering dedication to excellence.
-                    </p>
-                </div>
-            </div>
-        </div>
+    <section id="vision">
+      <h2>Vision</h2>
+      <p>Our vision is to be the leading platform for nursing excellence in Africa, fostering a community of skilled and empowered nurses who drive positive change in healthcare.</p>
     </section>
-
-    <!-- What We've Accomplished -->
-    <section class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-nurse-dark-red mb-4">What We've Accomplished</h2>
-                <p class="text-xl text-gray-600">Making a real difference in the nursing community</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center bg-nurse-light-red rounded-xl p-8">
-                    <i class="fas fa-users text-4xl text-nurse-red mb-4"></i>
-                    <h3 class="text-3xl font-bold text-nurse-dark-red mb-2">10,000+</h3>
-                    <p class="text-gray-700">Nurses Empowered</p>
-                </div>
-                <div class="text-center bg-nurse-light-red rounded-xl p-8">
-                    <i class="fas fa-graduation-cap text-4xl text-nurse-red mb-4"></i>
-                    <h3 class="text-3xl font-bold text-nurse-dark-red mb-2">500+</h3>
-                    <p class="text-gray-700">Educational Resources</p>
-                </div>
-                <div class="text-center bg-nurse-light-red rounded-xl p-8">
-                    <i class="fas fa-hospital text-4xl text-nurse-red mb-4"></i>
-                    <h3 class="text-3xl font-bold text-nurse-dark-red mb-2">100+</h3>
-                    <p class="text-gray-700">Healthcare Institutions</p>
-                </div>
-            </div>
-        </div>
+    <section id="mission">
+      <h2>Mission</h2>
+      <p>Our mission is to:</p>
+      <ul>
+        <li>Provide guidance and mentorship to nurses and student nurses.</li>
+        <li>Facilitate networking opportunities within the nursing community.</li>
+        <li>Enlighten and empower nurses through education and resources.</li>
+        <li>Build future leaders in nursing.</li>
+      </ul>
     </section>
-
-    <!-- Key Features -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-nurse-dark-red mb-4">Why Choose Nurse Emerge</h2>
-                <p class="text-xl text-gray-600">Everything you need to excel in your nursing career</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition">
-                    <i class="fas fa-book-medical text-4xl text-nurse-red mb-4"></i>
-                    <h3 class="text-xl font-bold text-nurse-dark-red mb-4">Expert Knowledge</h3>
-                    <p class="text-gray-700">Access cutting-edge nursing research, best practices, and evidence-based care protocols from industry leaders.</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition">
-                    <i class="fas fa-heart text-4xl text-nurse-red mb-4"></i>
-                    <h3 class="text-xl font-bold text-nurse-dark-red mb-4">Compassionate Community</h3>
-                    <p class="text-gray-700">Connect with fellow nurses, share experiences, and support each other through challenges and triumphs.</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition">
-                    <i class="fas fa-rocket text-4xl text-nurse-red mb-4"></i>
-                    <h3 class="text-xl font-bold text-nurse-dark-red mb-4">Career Growth</h3>
-                    <p class="text-gray-700">Accelerate your professional development with specialized training, certifications, and career guidance.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="py-16 bg-nurse-red text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-bold mb-4">Ready to Emerge as a Leader?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">
-                Join thousands of nurses who are transforming their careers and improving patient outcomes with Nurse Emerge.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="blog.html" class="bg-white text-nurse-red px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-                    Start Reading
-                </a>
-                <a href="events.html" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-nurse-red transition">
-                    View Events
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-nurse-dark-red text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-heartbeat text-2xl mr-2"></i>
-                        <span class="text-xl font-bold">Nurse Emerge</span>
-                    </div>
-                    <p class="text-gray-300">
-                        Empowering healthcare excellence through nursing innovation and community.
-                    </p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-300 hover:text-white transition">Home</a></li>
-                        <li><a href="blog.html" class="text-gray-300 hover:text-white transition">Blog</a></li>
-                        <li><a href="specialties.html" class="text-gray-300 hover:text-white transition">Specialties</a></li>
-                        <li><a href="events.html" class="text-gray-300 hover:text-white transition">Events</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Care Protocols</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Research Papers</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Certification Guide</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Career Advice</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
-                    <div class="flex space-x-4">
-                        <a href="https://instagram.com/nurseemerge?igshid=MzMyNGUyNmU2YQ==" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-instagram text-xl"></i>
-                        </a>
-                        <a href="https://youtube.com/@NurseEmerge?si=ylKHDaOr71-2DrUW" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-youtube text-xl"></i>
-                        </a>
-                        <a href="https://twitter.com/NurseEmerge" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/company/nurseemerge/" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="https://www.facebook.com/profile.php?id=61551852391530" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-facebook text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-red-800 mt-8 pt-8 text-center">
-                <p class="text-gray-300">&copy; 2024 Nurse Emerge. All rights reserved. Empowering healthcare excellence.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  </main>
+  <footer>
+    <div class="social-links">
+      <a href="https://instagram.com/nurseemerge"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/@NurseEmerge"><i class="fab fa-youtube"></i></a>
+      <a href="https://twitter.com/NurseEmerge"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/company/nurseemerge/"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61551852391530"><i class="fab fa-facebook"></i></a>
+    </div>
+    <p>&copy; 2025 Nurse Emerge. All rights reserved.</p>
+  </footer>
+  <script src="scripts.js"></script>
 </body>
 </html>
