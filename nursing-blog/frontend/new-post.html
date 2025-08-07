@@ -1,357 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Post - Nurse Emerge</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'nurse-red': '#dc2626',
-                        'nurse-dark-red': '#991b1b',
-                        'nurse-light-red': '#fecaca',
-                    }
-                }
-            }
-        }
-    </script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nurse Emerge - Add Post</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="index.html" class="flex items-center">
-                        <i class="fas fa-heartbeat text-nurse-red text-2xl mr-2"></i>
-                        <span class="text-2xl font-bold text-nurse-dark-red">Nurse Emerge</span>
-                    </a>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-700 hover:text-nurse-red px-3 py-2 font-medium transition">Home</a>
-                    <a href="blog.html" class="text-gray-700 hover:text-nurse-red px-3 py-2 font-medium transition">Blog</a>
-                    <a href="specialties.html" class="text-gray-700 hover:text-nurse-red px-3 py-2 font-medium transition">Specialties</a>
-                    <a href="events.html" class="text-gray-700 hover:text-nurse-red px-3 py-2 font-medium transition">Events</a>
-                    <a href="new-post.html" class="bg-nurse-red text-white px-4 py-2 rounded-lg font-medium">New Post</a>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="text-gray-700 hover:text-nurse-red">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-nurse-red">Home</a>
-                <a href="blog.html" class="block px-3 py-2 text-gray-700 hover:text-nurse-red">Blog</a>
-                <a href="specialties.html" class="block px-3 py-2 text-gray-700 hover:text-nurse-red">Specialties</a>
-                <a href="events.html" class="block px-3 py-2 text-gray-700 hover:text-nurse-red">Events</a>
-                <a href="new-post.html" class="block px-3 py-2 text-nurse-red font-medium">New Post</a>
-            </div>
-        </div>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logo.png" alt="Nurse Emerge Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="specialties.html">Specialties</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="new-post.html">Add Post</a></li>
+      </ul>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
     </nav>
-
-    <!-- Header -->
-    <section class="bg-gradient-to-r from-nurse-red to-nurse-dark-red text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h1 class="text-3xl md:text-4xl font-bold mb-4">Create New Post</h1>
-                <p class="text-lg md:text-xl max-w-2xl mx-auto">
-                    Share your nursing expertise and insights with the community
-                </p>
-            </div>
-        </div>
+  </header>
+  <main>
+    <section id="new-post">
+      <h1>Add New Post</h1>
+      <form id="new-post-form">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" required></textarea>
+        <label for="photo">Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+        <button type="submit">Submit</button>
+      </form>
+      <div id="message"></div>
     </section>
-
-    <!-- Form Section -->
-    <section class="py-12">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Success Message -->
-            <div id="success-message" class="hidden bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg mb-8">
-                <div class="flex items-center">
-                    <i class="fas fa-check-circle text-xl mr-3"></i>
-                    <div>
-                        <h3 class="font-semibold">Post Published Successfully!</h3>
-                        <p class="text-sm">Your post has been added to the blog. <a href="blog.html" class="underline hover:text-green-800">View all posts</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Error Message -->
-            <div id="error-message" class="hidden bg-red-100 border border-red-400 text-red-700 px-6 py-4 rounded-lg mb-8">
-                <div class="flex items-center">
-                    <i class="fas fa-exclamation-circle text-xl mr-3"></i>
-                    <div>
-                        <h3 class="font-semibold">Error Publishing Post</h3>
-                        <p class="text-sm" id="error-text">Please try again later or check your connection.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Form -->
-            <div class="bg-white rounded-xl shadow-lg p-8">
-                <form id="post-form" class="space-y-6">
-                    <!-- Author Name -->
-                    <div>
-                        <label for="author" class="block text-sm font-semibold text-nurse-dark-red mb-2">
-                            Author Name <span class="text-nurse-red">*</span>
-                        </label>
-                        <input 
-                            type="text" 
-                            id="author" 
-                            name="author" 
-                            required
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-nurse-red focus:border-transparent transition"
-                            placeholder="Enter your full name"
-                        >
-                        <p class="text-sm text-gray-600 mt-1">This will be displayed as the post author</p>
-                    </div>
-
-                    <!-- Post Title -->
-                    <div>
-                        <label for="title" class="block text-sm font-semibold text-nurse-dark-red mb-2">
-                            Post Title <span class="text-nurse-red">*</span>
-                        </label>
-                        <input 
-                            type="text" 
-                            id="title" 
-                            name="title" 
-                            required
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-nurse-red focus:border-transparent transition"
-                            placeholder="Enter a compelling title for your post"
-                        >
-                        <p class="text-sm text-gray-600 mt-1">Keep it concise and engaging (50-60 characters work best)</p>
-                    </div>
-
-                    <!-- Category -->
-                    <div>
-                        <label for="category" class="block text-sm font-semibold text-nurse-dark-red mb-2">
-                            Category <span class="text-nurse-red">*</span>
-                        </label>
-                        <select 
-                            id="category" 
-                            name="category" 
-                            required
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-nurse-red focus:border-transparent transition"
-                        >
-                            <option value="">Select a category</option>
-                            <option value="Clinical Care">Clinical Care</option>
-                            <option value="Education">Education</option>
-                            <option value="Career Growth">Career Growth</option>
-                            <option value="Community">Community</option>
-                            <option value="Research">Research</option>
-                            <option value="Technology">Technology</option>
-                            <option value="Leadership">Leadership</option>
-                            <option value="Specialties">Specialties</option>
-                        </select>
-                    </div>
-
-                    <!-- Post Content -->
-                    <div>
-                        <label for="content" class="block text-sm font-semibold text-nurse-dark-red mb-2">
-                            Post Content <span class="text-nurse-red">*</span>
-                        </label>
-                        <textarea 
-                            id="content" 
-                            name="content" 
-                            required
-                            rows="12"
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-nurse-red focus:border-transparent transition resize-y"
-                            placeholder="Write your post content here... 
-
-Share your insights, experiences, and knowledge with fellow nurses. Consider including:
-- Personal experiences or case studies
-- Evidence-based practices
-- Tips and best practices
-- Career advice
-- Industry trends and innovations
-
-Remember to write in a professional yet accessible tone."
-                        ></textarea>
-                        <p class="text-sm text-gray-600 mt-1">Minimum 200 characters. You can use line breaks for paragraphs.</p>
-                    </div>
-
-                    <!-- Tags -->
-                    <div>
-                        <label for="tags" class="block text-sm font-semibold text-nurse-dark-red mb-2">
-                            Tags (Optional)
-                        </label>
-                        <input 
-                            type="text" 
-                            id="tags" 
-                            name="tags"
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-nurse-red focus:border-transparent transition"
-                            placeholder="Enter tags separated by commas (e.g., ICU, patient care, leadership)"
-                        >
-                        <p class="text-sm text-gray-600 mt-1">Add relevant tags to help readers find your content</p>
-                    </div>
-
-                    <!-- Publishing Options -->
-                    <div class="bg-gray-50 rounded-lg p-6">
-                        <h3 class="text-lg font-semibold text-nurse-dark-red mb-4">Publishing Options</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-center">
-                                <input 
-                                    id="featured" 
-                                    name="featured" 
-                                    type="checkbox" 
-                                    class="h-4 w-4 text-nurse-red focus:ring-nurse-red border-gray-300 rounded"
-                                >
-                                <label for="featured" class="ml-2 block text-sm text-gray-700">
-                                    Feature this post (will appear prominently on the blog page)
-                                </label>
-                            </div>
-                            <div class="flex items-center">
-                                <input 
-                                    id="newsletter" 
-                                    name="newsletter" 
-                                    type="checkbox" 
-                                    class="h-4 w-4 text-nurse-red focus:ring-nurse-red border-gray-300 rounded"
-                                >
-                                <label for="newsletter" class="ml-2 block text-sm text-gray-700">
-                                    Include in next newsletter
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <div class="flex flex-col sm:flex-row gap-4 pt-6">
-                        <button 
-                            type="submit" 
-                            id="submit-btn"
-                            class="flex-1 bg-nurse-red text-white px-8 py-3 rounded-lg font-semibold hover:bg-nurse-dark-red transition flex items-center justify-center"
-                        >
-                            <i class="fas fa-paper-plane mr-2"></i>
-                            Publish Post
-                        </button>
-                        <button 
-                            type="button" 
-                            onclick="saveDraft()"
-                            class="flex-1 border-2 border-nurse-red text-nurse-red px-8 py-3 rounded-lg font-semibold hover:bg-nurse-red hover:text-white transition"
-                        >
-                            <i class="fas fa-save mr-2"></i>
-                            Save as Draft
-                        </button>
-                    </div>
-                </form>
-            </div>
-
-            <!-- Writing Tips -->
-            <div class="mt-12 bg-white rounded-xl shadow-lg p-8">
-                <h3 class="text-2xl font-bold text-nurse-dark-red mb-6">Writing Tips for Great Nursing Content</h3>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                        <h4 class="font-semibold text-nurse-red mb-3">Content Ideas</h4>
-                        <ul class="space-y-2 text-gray-700">
-                            <li class="flex items-start">
-                                <i class="fas fa-lightbulb text-nurse-red mr-2 mt-1"></i>
-                                <span>Share a challenging case and lessons learned</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-lightbulb text-nurse-red mr-2 mt-1"></i>
-                                <span>Discuss new research and its clinical implications</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-lightbulb text-nurse-red mr-2 mt-1"></i>
-                                <span>Provide career advice for fellow nurses</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-lightbulb text-nurse-red mr-2 mt-1"></i>
-                                <span>Review new nursing tools or technologies</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-nurse-red mb-3">Best Practices</h4>
-                        <ul class="space-y-2 text-gray-700">
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-nurse-red mr-2 mt-1"></i>
-                                <span>Use clear, professional language</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-nurse-red mr-2 mt-1"></i>
-                                <span>Include practical takeaways</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-nurse-red mr-2 mt-1"></i>
-                                <span>Respect patient confidentiality</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-nurse-red mr-2 mt-1"></i>
-                                <span>Cite evidence-based sources</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-nurse-dark-red text-white py-12 mt-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-heartbeat text-2xl mr-2"></i>
-                        <span class="text-xl font-bold">Nurse Emerge</span>
-                    </div>
-                    <p class="text-gray-300">
-                        Empowering healthcare excellence through nursing innovation and community.
-                    </p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-300 hover:text-white transition">Home</a></li>
-                        <li><a href="blog.html" class="text-gray-300 hover:text-white transition">Blog</a></li>
-                        <li><a href="specialties.html" class="text-gray-300 hover:text-white transition">Specialties</a></li>
-                        <li><a href="events.html" class="text-gray-300 hover:text-white transition">Events</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Care Protocols</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Research Papers</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Certification Guide</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Career Advice</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
-                    <div class="flex space-x-4">
-                        <a href="https://instagram.com/nurseemerge?igshid=MzMyNGUyNmU2YQ==" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-instagram text-xl"></i>
-                        </a>
-                        <a href="https://youtube.com/@NurseEmerge?si=ylKHDaOr71-2DrUW" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-youtube text-xl"></i>
-                        </a>
-                        <a href="https://twitter.com/NurseEmerge" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/company/nurseemerge/" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="https://www.facebook.com/profile.php?id=61551852391530" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-facebook text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-red-800 mt-8 pt-8 text-center">
-                <p class="text-gray-300">&copy; 2024 Nurse Emerge. All rights reserved. Empowering healthcare excellence.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  </main>
+  <footer>
+    <div class="social-links">
+      <a href="https://instagram.com/nurseemerge"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/@NurseEmerge"><i class="fab fa-youtube"></i></a>
+      <a href="https://twitter.com/NurseEmerge"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/company/nurseemerge/"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61551852391530"><i class="fab fa-facebook"></i></a>
+    </div>
+    <p>&copy; 2025 Nurse Emerge. All rights reserved.</p>
+  </footer>
+  <script src="scripts.js"></script>
 </body>
 </html>
