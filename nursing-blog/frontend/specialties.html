@@ -1,379 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nursing Specialties - Nurse Emerge</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'nurse-red': '#dc2626',
-                        'nurse-dark-red': '#991b1b',
-                        'nurse-light-red': '#fecaca',
-                    }
-                }
-            }
-        }
-    </script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nurse Emerge - Specialties</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-<body class="bg-white text-gray-800">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="index.html" class="flex items-center">
-                        <i class="fas fa-heartbeat text-nurse-red text-2xl mr-2"></i>
-                        <span class="text-2xl font-bold text-nurse-dark-red">Nurse Emerge</span>
-                    </a>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-700 hover:text-nurse-red px-3 py-2 font-medium transition">Home</a>
-                    <a href="blog.html" class="text-gray-700 hover:text-nurse-red px-3 py-2 font-medium transition">Blog</a>
-                    <a href="specialties.html" class="text-nurse-red border-b-2 border-nurse-red px-3 py-2 font-medium">Specialties</a>
-                    <a href="events.html" class="text-gray-700 hover:text-nurse-red px-3 py-2 font-medium transition">Events</a>
-                    <a href="new-post.html" class="bg-nurse-red text-white px-4 py-2 rounded-lg hover:bg-nurse-dark-red transition">New Post</a>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="text-gray-700 hover:text-nurse-red">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-nurse-red">Home</a>
-                <a href="blog.html" class="block px-3 py-2 text-gray-700 hover:text-nurse-red">Blog</a>
-                <a href="specialties.html" class="block px-3 py-2 text-nurse-red font-medium">Specialties</a>
-                <a href="events.html" class="block px-3 py-2 text-gray-700 hover:text-nurse-red">Events</a>
-                <a href="new-post.html" class="block px-3 py-2 text-gray-700 hover:text-nurse-red">New Post</a>
-            </div>
-        </div>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logo.png" alt="Nurse Emerge Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="specialties.html">Specialties</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="new-post.html">Add Post</a></li>
+      </ul>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
     </nav>
-
-    <!-- Header -->
-    <section class="bg-gradient-to-r from-nurse-red to-nurse-dark-red text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Nursing Specialties</h1>
-                <p class="text-xl md:text-2xl max-w-3xl mx-auto">
-                    Explore diverse career paths and find your perfect nursing specialty
-                </p>
-            </div>
-        </div>
+  </header>
+  <main>
+    <section id="specialties">
+      <h1>Nursing Specialties</h1>
+      <ul>
+        <li><strong>Critical Care Nursing</strong>: Focuses on patients with life-threatening conditions in intensive care units.</li>
+        <li><strong>Pediatric Nursing</strong>: Provides care for infants, children, and adolescents.</li>
+        <li><strong>Oncology Nursing</strong>: Supports patients undergoing cancer treatment.</li>
+        <li><strong>Geriatric Nursing</strong>: Cares for elderly patients with chronic conditions.</li>
+        <li><strong>Emergency Nursing</strong>: Handles urgent and critical cases in emergency departments.</li>
+        <li><strong>Surgical Nursing</strong>: Assists in surgical procedures and patient recovery.</li>
+      </ul>
     </section>
-
-    <!-- Specialties Grid -->
-    <section class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Critical Care -->
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-heart-pulse text-4xl text-nurse-red mb-4"></i>
-                        <h3 class="text-2xl font-bold text-nurse-dark-red mb-2">Critical Care</h3>
-                        <div class="text-green-600 font-semibold mb-4">$75,000 - $95,000</div>
-                    </div>
-                    <p class="text-gray-700 mb-4">
-                        Provide intensive care for critically ill patients in ICU, CCU, and emergency settings. 
-                        Requires advanced assessment skills and ability to work under pressure.
-                    </p>
-                    <ul class="text-sm text-gray-600 mb-6 space-y-1">
-                        <li>• ICU/CCU experience required</li>
-                        <li>• CCRN certification preferred</li>
-                        <li>• Advanced life support training</li>
-                        <li>• High-stress environment</li>
-                    </ul>
-                    <a href="#" class="text-nurse-red font-semibold hover:text-nurse-dark-red">Learn More →</a>
-                </div>
-
-                <!-- Pediatric Nursing -->
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-baby text-4xl text-nurse-red mb-4"></i>
-                        <h3 class="text-2xl font-bold text-nurse-dark-red mb-2">Pediatric</h3>
-                        <div class="text-green-600 font-semibold mb-4">$65,000 - $85,000</div>
-                    </div>
-                    <p class="text-gray-700 mb-4">
-                        Care for infants, children, and adolescents. Requires specialized knowledge of pediatric 
-                        development and family-centered care approaches.
-                    </p>
-                    <ul class="text-sm text-gray-600 mb-6 space-y-1">
-                        <li>• Pediatric experience preferred</li>
-                        <li>• CPN certification available</li>
-                        <li>• Family communication skills</li>
-                        <li>• Emotional resilience</li>
-                    </ul>
-                    <a href="#" class="text-nurse-red font-semibold hover:text-nurse-dark-red">Learn More →</a>
-                </div>
-
-                <!-- Emergency Nursing -->
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-ambulance text-4xl text-nurse-red mb-4"></i>
-                        <h3 class="text-2xl font-bold text-nurse-dark-red mb-2">Emergency</h3>
-                        <div class="text-green-600 font-semibold mb-4">$70,000 - $90,000</div>
-                    </div>
-                    <p class="text-gray-700 mb-4">
-                        Provide rapid assessment and treatment in emergency departments. Handle trauma, 
-                        acute illnesses, and emergency situations with quick decision-making.
-                    </p>
-                    <ul class="text-sm text-gray-600 mb-6 space-y-1">
-                        <li>• Emergency experience required</li>
-                        <li>• CEN certification preferred</li>
-                        <li>• Trauma training</li>
-                        <li>• Fast-paced environment</li>
-                    </ul>
-                    <a href="#" class="text-nurse-red font-semibold hover:text-nurse-dark-red">Learn More →</a>
-                </div>
-
-                <!-- Operating Room -->
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-user-md text-4xl text-nurse-red mb-4"></i>
-                        <h3 class="text-2xl font-bold text-nurse-dark-red mb-2">Operating Room</h3>
-                        <div class="text-green-600 font-semibold mb-4">$72,000 - $92,000</div>
-                    </div>
-                    <p class="text-gray-700 mb-4">
-                        Assist surgeons during operations, maintain sterile environments, and ensure patient 
-                        safety throughout surgical procedures.
-                    </p>
-                    <ul class="text-sm text-gray-600 mb-6 space-y-1">
-                        <li>• OR experience preferred</li>
-                        <li>• CNOR certification available</li>
-                        <li>• Sterile technique mastery</li>
-                        <li>• Attention to detail</li>
-                    </ul>
-                    <a href="#" class="text-nurse-red font-semibold hover:text-nurse-dark-red">Learn More →</a>
-                </div>
-
-                <!-- Mental Health -->
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-brain text-4xl text-nurse-red mb-4"></i>
-                        <h3 class="text-2xl font-bold text-nurse-dark-red mb-2">Mental Health</h3>
-                        <div class="text-green-600 font-semibold mb-4">$68,000 - $88,000</div>
-                    </div>
-                    <p class="text-gray-700 mb-4">
-                        Support patients with mental health conditions, providing therapeutic care and 
-                        crisis intervention in various psychiatric settings.
-                    </p>
-                    <ul class="text-sm text-gray-600 mb-6 space-y-1">
-                        <li>• Psychiatric experience helpful</li>
-                        <li>• PMH-BC certification available</li>
-                        <li>• Therapeutic communication</li>
-                        <li>• Crisis management skills</li>
-                    </ul>
-                    <a href="#" class="text-nurse-red font-semibold hover:text-nurse-dark-red">Learn More →</a>
-                </div>
-
-                <!-- Oncology -->
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-ribbon text-4xl text-nurse-red mb-4"></i>
-                        <h3 class="text-2xl font-bold text-nurse-dark-red mb-2">Oncology</h3>
-                        <div class="text-green-600 font-semibold mb-4">$74,000 - $94,000</div>
-                    </div>
-                    <p class="text-gray-700 mb-4">
-                        Care for cancer patients throughout their treatment journey, providing chemotherapy 
-                        administration and emotional support.
-                    </p>
-                    <ul class="text-sm text-gray-600 mb-6 space-y-1">
-                        <li>• Oncology experience preferred</li>
-                        <li>• OCN certification available</li>
-                        <li>• Chemotherapy certification</li>
-                        <li>• Compassionate care focus</li>
-                    </ul>
-                    <a href="#" class="text-nurse-red font-semibold hover:text-nurse-dark-red">Learn More →</a>
-                </div>
-
-                <!-- Nurse Practitioner -->
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition border-2 border-nurse-red">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-user-graduate text-4xl text-nurse-red mb-4"></i>
-                        <h3 class="text-2xl font-bold text-nurse-dark-red mb-2">Nurse Practitioner</h3>
-                        <div class="text-green-600 font-semibold mb-4">$95,000 - $120,000</div>
-                        <span class="bg-nurse-light-red text-nurse-dark-red px-3 py-1 rounded-full text-sm font-semibold">Advanced Practice</span>
-                    </div>
-                    <p class="text-gray-700 mb-4">
-                        Provide advanced nursing care with prescriptive authority. Diagnose conditions, 
-                        order tests, and manage patient care independently.
-                    </p>
-                    <ul class="text-sm text-gray-600 mb-6 space-y-1">
-                        <li>• Master's degree required</li>
-                        <li>• National certification</li>
-                        <li>• State licensure</li>
-                        <li>• Independent practice</li>
-                    </ul>
-                    <a href="#" class="text-nurse-red font-semibold hover:text-nurse-dark-red">Learn More →</a>
-                </div>
-
-                <!-- Nurse Anesthetist -->
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition border-2 border-nurse-red">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-mask text-4xl text-nurse-red mb-4"></i>
-                        <h3 class="text-2xl font-bold text-nurse-dark-red mb-2">Nurse Anesthetist</h3>
-                        <div class="text-green-600 font-semibold mb-4">$150,000 - $200,000</div>
-                        <span class="bg-nurse-light-red text-nurse-dark-red px-3 py-1 rounded-full text-sm font-semibold">Advanced Practice</span>
-                    </div>
-                    <p class="text-gray-700 mb-4">
-                        Administer anesthesia for surgical procedures. Requires extensive training and 
-                        offers one of the highest nursing salaries.
-                    </p>
-                    <ul class="text-sm text-gray-600 mb-6 space-y-1">
-                        <li>• Master's degree required</li>
-                        <li>• ICU experience required</li>
-                        <li>• NBCRNA certification</li>
-                        <li>• Highly competitive field</li>
-                    </ul>
-                    <a href="#" class="text-nurse-red font-semibold hover:text-nurse-dark-red">Learn More →</a>
-                </div>
-
-                <!-- Travel Nursing -->
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-plane text-4xl text-nurse-red mb-4"></i>
-                        <h3 class="text-2xl font-bold text-nurse-dark-red mb-2">Travel Nursing</h3>
-                        <div class="text-green-600 font-semibold mb-4">$80,000 - $120,000</div>
-                    </div>
-                    <p class="text-gray-700 mb-4">
-                        Work temporary assignments across the country. Enjoy higher pay, travel opportunities, 
-                        and diverse clinical experiences.
-                    </p>
-                    <ul class="text-sm text-gray-600 mb-6 space-y-1">
-                        <li>• 1-2 years experience required</li>
-                        <li>• Flexible assignments</li>
-                        <li>• Housing provided</li>
-                        <li>• Adventure and variety</li>
-                    </ul>
-                    <a href="#" class="text-nurse-red font-semibold hover:text-nurse-dark-red">Learn More →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Career Advancement -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-nurse-dark-red mb-4">Career Advancement Path</h2>
-                <p class="text-xl text-gray-600">Build your nursing career step by step</p>
-            </div>
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="bg-nurse-light-red rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-nurse-dark-red font-bold text-xl">1</span>
-                    </div>
-                    <h3 class="font-bold text-nurse-dark-red mb-2">New Graduate</h3>
-                    <p class="text-gray-600 text-sm">Start in med-surg or other general units to build foundational skills</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-nurse-light-red rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-nurse-dark-red font-bold text-xl">2</span>
-                    </div>
-                    <h3 class="font-bold text-nurse-dark-red mb-2">Specialty Training</h3>
-                    <p class="text-gray-600 text-sm">Gain experience and pursue certifications in your area of interest</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-nurse-light-red rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-nurse-dark-red font-bold text-xl">3</span>
-                    </div>
-                    <h3 class="font-bold text-nurse-dark-red mb-2">Expert Practice</h3>
-                    <p class="text-gray-600 text-sm">Develop expertise and consider leadership or education roles</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-nurse-light-red rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-nurse-dark-red font-bold text-xl">4</span>
-                    </div>
-                    <h3 class="font-bold text-nurse-dark-red mb-2">Advanced Practice</h3>
-                    <p class="text-gray-600 text-sm">Pursue advanced degrees for NP, CRNA, or leadership positions</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="py-16 bg-nurse-red text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-4">Ready to Explore Your Specialty?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">
-                Connect with specialty mentors and get personalized career guidance
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="blog.html" class="bg-white text-nurse-red px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-                    Read Career Stories
-                </a>
-                <a href="events.html" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-nurse-red transition">
-                    Join Career Events
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-nurse-dark-red text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-heartbeat text-2xl mr-2"></i>
-                        <span class="text-xl font-bold">Nurse Emerge</span>
-                    </div>
-                    <p class="text-gray-300">
-                        Empowering healthcare excellence through nursing innovation and community.
-                    </p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-300 hover:text-white transition">Home</a></li>
-                        <li><a href="blog.html" class="text-gray-300 hover:text-white transition">Blog</a></li>
-                        <li><a href="specialties.html" class="text-gray-300 hover:text-white transition">Specialties</a></li>
-                        <li><a href="events.html" class="text-gray-300 hover:text-white transition">Events</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Care Protocols</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Research Papers</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Certification Guide</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Career Advice</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
-                    <div class="flex space-x-4">
-                        <a href="https://instagram.com/nurseemerge?igshid=MzMyNGUyNmU2YQ==" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-instagram text-xl"></i>
-                        </a>
-                        <a href="https://youtube.com/@NurseEmerge?si=ylKHDaOr71-2DrUW" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-youtube text-xl"></i>
-                        </a>
-                        <a href="https://twitter.com/NurseEmerge" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/company/nurseemerge/" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="https://www.facebook.com/profile.php?id=61551852391530" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-facebook text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-red-800 mt-8 pt-8 text-center">
-                <p class="text-gray-300">&copy; 2024 Nurse Emerge. All rights reserved. Empowering healthcare excellence.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  </main>
+  <footer>
+    <div class="social-links">
+      <a href="https://instagram.com/nurseemerge"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/@NurseEmerge"><i class="fab fa-youtube"></i></a>
+      <a href="https://twitter.com/NurseEmerge"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/company/nurseemerge/"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61551852391530"><i class="fab fa-facebook"></i></a>
+    </div>
+    <p>&copy; 2025 Nurse Emerge. All rights reserved.</p>
+  </footer>
+  <script src="scripts.js"></script>
 </body>
 </html>
