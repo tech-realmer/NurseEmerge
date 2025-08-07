@@ -1,439 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events - Nurse Emerge</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'nurse-red': '#dc2626',
-                        'nurse-dark-red': '#991b1b',
-                        'nurse-light-red': '#fecaca',
-                    }
-                }
-            }
-        }
-    </script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nurse Emerge - Events</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-<body class="bg-white text-gray-800">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="index.html" class="flex items-center">
-                        <i class="fas fa-heartbeat text-nurse-red text-2xl mr-2"></i>
-                        <span class="text-2xl font-bold text-nurse-dark-red">Nurse Emerge</span>
-                    </a>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-700 hover:text-nurse-red px-3 py-2 font-medium transition">Home</a>
-                    <a href="blog.html" class="text-gray-700 hover:text-nurse-red px-3 py-2 font-medium transition">Blog</a>
-                    <a href="specialties.html" class="text-gray-700 hover:text-nurse-red px-3 py-2 font-medium transition">Specialties</a>
-                    <a href="events.html" class="text-nurse-red border-b-2 border-nurse-red px-3 py-2 font-medium">Events</a>
-                    <a href="new-post.html" class="bg-nurse-red text-white px-4 py-2 rounded-lg hover:bg-nurse-dark-red transition">New Post</a>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="text-gray-700 hover:text-nurse-red">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-nurse-red">Home</a>
-                <a href="blog.html" class="block px-3 py-2 text-gray-700 hover:text-nurse-red">Blog</a>
-                <a href="specialties.html" class="block px-3 py-2 text-gray-700 hover:text-nurse-red">Specialties</a>
-                <a href="events.html" class="block px-3 py-2 text-nurse-red font-medium">Events</a>
-                <a href="new-post.html" class="block px-3 py-2 text-gray-700 hover:text-nurse-red">New Post</a>
-            </div>
-        </div>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logo.png" alt="Nurse Emerge Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="specialties.html">Specialties</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="new-post.html">Add Post</a></li>
+      </ul>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
     </nav>
-
-    <!-- Header -->
-    <section class="bg-gradient-to-r from-nurse-red to-nurse-dark-red text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Upcoming Events</h1>
-                <p class="text-xl md:text-2xl max-w-3xl mx-auto">
-                    Connect, learn, and grow with the nursing community
-                </p>
-            </div>
-        </div>
+  </header>
+  <main>
+    <section id="events">
+      <h1>Upcoming Nursing Conferences 2025</h1>
+      <ul>
+        <li>Nursing World Conference - October 27-29, 2025, Orlando, Florida, USA</li>
+        <li>American Academy of Ambulatory Care Nursing Conference - May 20-24, 2025, San Diego, California, USA</li>
+        <li>Sigma Theta Tau International Honor Society of Nursing Biennial Convention - November 2025, Indianapolis, Indiana, USA</li>
+      </ul>
     </section>
-
-    <!-- Featured Event -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div class="md:flex">
-                    <div class="md:w-1/2 bg-nurse-red text-white p-8 flex items-center">
-                        <div>
-                            <div class="text-nurse-light-red text-sm font-semibold mb-2">FEATURED EVENT</div>
-                            <h2 class="text-3xl font-bold mb-4">Annual Nursing Excellence Summit 2024</h2>
-                            <p class="text-lg mb-6">
-                                Join 1000+ nurses for three days of cutting-edge education, networking, and inspiration. 
-                                Featuring keynote speakers, hands-on workshops, and the latest in nursing innovation.
-                            </p>
-                            <div class="flex items-center text-lg mb-4">
-                                <i class="fas fa-calendar-alt mr-3"></i>
-                                <span>March 15-17, 2024</span>
-                            </div>
-                            <div class="flex items-center text-lg mb-6">
-                                <i class="fas fa-map-marker-alt mr-3"></i>
-                                <span>Chicago Convention Center</span>
-                            </div>
-                            <button class="bg-white text-nurse-red px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-                                Register Now - $299
-                            </button>
-                        </div>
-                    </div>
-                    <div class="md:w-1/2 p-8">
-                        <h3 class="text-xl font-bold text-nurse-dark-red mb-4">What You'll Get:</h3>
-                        <ul class="space-y-3 text-gray-700">
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-nurse-red mr-3 mt-1"></i>
-                                <span>20+ CEU credits accredited by ANCC</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-nurse-red mr-3 mt-1"></i>
-                                <span>Access to 40+ expert-led sessions</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-nurse-red mr-3 mt-1"></i>
-                                <span>Networking with top nursing leaders</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-nurse-red mr-3 mt-1"></i>
-                                <span>Exhibition hall with 100+ vendors</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-nurse-red mr-3 mt-1"></i>
-                                <span>All meals and materials included</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Events Calendar -->
-    <section class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-nurse-dark-red mb-4">Event Calendar</h2>
-                <p class="text-xl text-gray-600">Don't miss these upcoming opportunities</p>
-            </div>
-            
-            <div class="grid lg:grid-cols-2 gap-8">
-                <!-- Webinar Event -->
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                    <div class="flex items-start">
-                        <div class="bg-nurse-light-red rounded-lg p-3 mr-4">
-                            <div class="text-center">
-                                <div class="text-nurse-dark-red font-bold text-lg">15</div>
-                                <div class="text-nurse-red text-sm">FEB</div>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <div class="text-green-600 text-sm font-semibold mb-1">WEBINAR</div>
-                            <h3 class="text-lg font-bold text-nurse-dark-red mb-2">
-                                Evidence-Based Practice in Critical Care
-                            </h3>
-                            <p class="text-gray-600 text-sm mb-3">
-                                Learn the latest research and implementation strategies for improving patient outcomes in ICU settings.
-                            </p>
-                            <div class="flex items-center text-sm text-gray-500 mb-3">
-                                <i class="fas fa-clock mr-2"></i>
-                                <span>2:00 PM - 3:30 PM EST</span>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span class="text-nurse-red font-semibold">FREE</span>
-                                <button class="text-nurse-red hover:text-nurse-dark-red font-semibold">
-                                    Register →
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Workshop Event -->
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                    <div class="flex items-start">
-                        <div class="bg-nurse-light-red rounded-lg p-3 mr-4">
-                            <div class="text-center">
-                                <div class="text-nurse-dark-red font-bold text-lg">22</div>
-                                <div class="text-nurse-red text-sm">FEB</div>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <div class="text-blue-600 text-sm font-semibold mb-1">WORKSHOP</div>
-                            <h3 class="text-lg font-bold text-nurse-dark-red mb-2">
-                                Advanced Cardiac Life Support Recertification
-                            </h3>
-                            <p class="text-gray-600 text-sm mb-3">
-                                Hands-on ACLS recertification with simulation-based learning and team scenarios.
-                            </p>
-                            <div class="flex items-center text-sm text-gray-500 mb-3">
-                                <i class="fas fa-map-marker-alt mr-2"></i>
-                                <span>Seattle Medical Center</span>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span class="text-nurse-red font-semibold">$150</span>
-                                <button class="text-nurse-red hover:text-nurse-dark-red font-semibold">
-                                    Register →
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Conference Event -->
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                    <div class="flex items-start">
-                        <div class="bg-nurse-light-red rounded-lg p-3 mr-4">
-                            <div class="text-center">
-                                <div class="text-nurse-dark-red font-bold text-lg">08</div>
-                                <div class="text-nurse-red text-sm">MAR</div>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <div class="text-purple-600 text-sm font-semibold mb-1">CONFERENCE</div>
-                            <h3 class="text-lg font-bold text-nurse-dark-red mb-2">
-                                Pediatric Nursing Leadership Conference
-                            </h3>
-                            <p class="text-gray-600 text-sm mb-3">
-                                Two-day conference focusing on leadership development in pediatric nursing practice.
-                            </p>
-                            <div class="flex items-center text-sm text-gray-500 mb-3">
-                                <i class="fas fa-map-marker-alt mr-2"></i>
-                                <span>Boston Children's Hospital</span>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span class="text-nurse-red font-semibold">$425</span>
-                                <button class="text-nurse-red hover:text-nurse-dark-red font-semibold">
-                                    Register →
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Certification Event -->
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                    <div class="flex items-start">
-                        <div class="bg-nurse-light-red rounded-lg p-3 mr-4">
-                            <div class="text-center">
-                                <div class="text-nurse-dark-red font-bold text-lg">20</div>
-                                <div class="text-nurse-red text-sm">MAR</div>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <div class="text-orange-600 text-sm font-semibold mb-1">CERTIFICATION</div>
-                            <h3 class="text-lg font-bold text-nurse-dark-red mb-2">
-                                Wound Care Certification Course
-                            </h3>
-                            <p class="text-gray-600 text-sm mb-3">
-                                Comprehensive certification program in wound assessment, treatment, and management.
-                            </p>
-                            <div class="flex items-center text-sm text-gray-500 mb-3">
-                                <i class="fas fa-calendar mr-2"></i>
-                                <span>5-day intensive program</span>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span class="text-nurse-red font-semibold">$850</span>
-                                <button class="text-nurse-red hover:text-nurse-dark-red font-semibold">
-                                    Register →
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Networking Event -->
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                    <div class="flex items-start">
-                        <div class="bg-nurse-light-red rounded-lg p-3 mr-4">
-                            <div class="text-center">
-                                <div class="text-nurse-dark-red font-bold text-lg">05</div>
-                                <div class="text-nurse-red text-sm">APR</div>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <div class="text-pink-600 text-sm font-semibold mb-1">NETWORKING</div>
-                            <h3 class="text-lg font-bold text-nurse-dark-red mb-2">
-                                Nurse Leaders Monthly Meetup
-                            </h3>
-                            <p class="text-gray-600 text-sm mb-3">
-                                Connect with fellow nurse leaders over dinner and discussion about current healthcare challenges.
-                            </p>
-                            <div class="flex items-center text-sm text-gray-500 mb-3">
-                                <i class="fas fa-clock mr-2"></i>
-                                <span>6:00 PM - 9:00 PM</span>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span class="text-nurse-red font-semibold">$45</span>
-                                <button class="text-nurse-red hover:text-nurse-dark-red font-semibold">
-                                    Register →
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Career Fair Event -->
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                    <div class="flex items-start">
-                        <div class="bg-nurse-light-red rounded-lg p-3 mr-4">
-                            <div class="text-center">
-                                <div class="text-nurse-dark-red font-bold text-lg">18</div>
-                                <div class="text-nurse-red text-sm">APR</div>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <div class="text-teal-600 text-sm font-semibold mb-1">CAREER FAIR</div>
-                            <h3 class="text-lg font-bold text-nurse-dark-red mb-2">
-                                Spring Nursing Career Fair
-                            </h3>
-                            <p class="text-gray-600 text-sm mb-3">
-                                Meet with 50+ healthcare employers and explore new career opportunities in nursing.
-                            </p>
-                            <div class="flex items-center text-sm text-gray-500 mb-3">
-                                <i class="fas fa-map-marker-alt mr-2"></i>
-                                <span>Convention Center Downtown</span>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span class="text-nurse-red font-semibold">FREE</span>
-                                <button class="text-nurse-red hover:text-nurse-dark-red font-semibold">
-                                    Register →
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Event Categories -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-nurse-dark-red mb-4">Event Categories</h2>
-                <p class="text-xl text-gray-600">Find events that match your interests</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition">
-                    <i class="fas fa-graduation-cap text-4xl text-nurse-red mb-4"></i>
-                    <h3 class="text-xl font-bold text-nurse-dark-red mb-2">Continuing Education</h3>
-                    <p class="text-gray-600 mb-4">Earn CEUs and stay current with the latest in nursing practice</p>
-                    <button class="text-nurse-red font-semibold hover:text-nurse-dark-red">
-                        View Events →
-                    </button>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition">
-                    <i class="fas fa-users text-4xl text-nurse-red mb-4"></i>
-                    <h3 class="text-xl font-bold text-nurse-dark-red mb-2">Networking</h3>
-                    <p class="text-gray-600 mb-4">Connect with peers and build professional relationships</p>
-                    <button class="text-nurse-red font-semibold hover:text-nurse-dark-red">
-                        View Events →
-                    </button>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition">
-                    <i class="fas fa-briefcase text-4xl text-nurse-red mb-4"></i>
-                    <h3 class="text-xl font-bold text-nurse-dark-red mb-2">Career Development</h3>
-                    <p class="text-gray-600 mb-4">Advance your career with leadership and skills training</p>
-                    <button class="text-nurse-red font-semibold hover:text-nurse-dark-red">
-                        View Events →
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Signup -->
-    <section class="py-16 bg-nurse-red text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-4">Never Miss an Event</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">
-                Subscribe to get notified about upcoming events and early bird pricing
-            </p>
-            <div class="max-w-md mx-auto flex gap-2">
-                <input type="email" placeholder="Enter your email" 
-                       class="flex-1 px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
-                <button class="bg-nurse-dark-red text-white px-6 py-3 rounded-lg hover:bg-red-900 transition">
-                    Subscribe
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-nurse-dark-red text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-heartbeat text-2xl mr-2"></i>
-                        <span class="text-xl font-bold">Nurse Emerge</span>
-                    </div>
-                    <p class="text-gray-300">
-                        Empowering healthcare excellence through nursing innovation and community.
-                    </p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-300 hover:text-white transition">Home</a></li>
-                        <li><a href="blog.html" class="text-gray-300 hover:text-white transition">Blog</a></li>
-                        <li><a href="specialties.html" class="text-gray-300 hover:text-white transition">Specialties</a></li>
-                        <li><a href="events.html" class="text-gray-300 hover:text-white transition">Events</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Care Protocols</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Research Papers</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Certification Guide</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Career Advice</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
-                    <div class="flex space-x-4">
-                        <a href="https://instagram.com/nurseemerge?igshid=MzMyNGUyNmU2YQ==" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-instagram text-xl"></i>
-                        </a>
-                        <a href="https://youtube.com/@NurseEmerge?si=ylKHDaOr71-2DrUW" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-youtube text-xl"></i>
-                        </a>
-                        <a href="https://twitter.com/NurseEmerge" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/company/nurseemerge/" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="https://www.facebook.com/profile.php?id=61551852391530" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-facebook text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-red-800 mt-8 pt-8 text-center">
-                <p class="text-gray-300">&copy; 2024 Nurse Emerge. All rights reserved. Empowering healthcare excellence.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  </main>
+  <footer>
+    <div class="social-links">
+      <a href="https://instagram.com/nurseemerge"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/@NurseEmerge"><i class="fab fa-youtube"></i></a>
+      <a href="https://twitter.com/NurseEmerge"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/company/nurseemerge/"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61551852391530"><i class="fab fa-facebook"></i></a>
+    </div>
+    <p>&copy; 2025 Nurse Emerge. All rights reserved.</p>
+  </footer>
+  <script src="scripts.js"></script>
 </body>
 </html>
